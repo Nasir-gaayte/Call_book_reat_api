@@ -1,0 +1,28 @@
+from django.urls import path
+from .views import (categoryGet,
+                    cityGet,
+                    userinfoGet,
+                    addCategory,
+                    addCity,
+                    addUserinfo,
+                    updateCategory,
+                    updateCity,
+                    updateUserInfo,
+                    deleteCategory,
+                    deleteCity,
+                    deleteUserInfo,
+)
+urlpatterns = [
+    path('category/',categoryGet),
+    path('city/',cityGet),
+    path('userinfo/',userinfoGet),
+    path('add_category',addCategory),
+    path('add_city',addCity),
+    path('add_userinfo',addUserinfo),
+    path('update_category/<str:pk>/',updateCategory),
+    path('update_city/<str:pk>/',updateCity),
+    path('update_userinfo/<str:pk>/',updateUserInfo),
+    path('delete_category/<str:pk>/',deleteCategory),
+    path('delete_city/<str:pk>/',deleteCity),
+    path('delete_userinfo/<str:pk>/',deleteUserInfo),
+]
